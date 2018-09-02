@@ -1,0 +1,9 @@
+.git/
+.npmignore
+LICENSE
+package-lock.json
+src/
+.gitignore
+.travis.yml
+node_modules/
+tsconfig.json
