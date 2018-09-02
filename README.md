@@ -10,7 +10,11 @@ This little library makes things a bit easier. All you need is just 1 TypeScript
 import * as migrations from './migrations';
 import { migrate } from 'umzug-typescript-helper';
 
-migrate(migrations).catch((err: any) => {
+const umzugOptions = {
+    // your umzug config, see https://github.com/sequelize/umzug for more info
+};
+
+migrate(migrations, umzugOptions).catch((err: any) => {
     console.error(err);
     process.exit(1);
 });
