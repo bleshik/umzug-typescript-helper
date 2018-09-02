@@ -24,11 +24,10 @@
     "keywords": [
         "nodejs",
         "node",
-        "context",
-        "domain",
-        "promise",
-        "callback",
-        "threadlocal"
+        "umzug",
+        "migration",
+        "migrations",
+        "typescript"
     ],
     "license": "Unlicense",
     "main": "build/index.js",
