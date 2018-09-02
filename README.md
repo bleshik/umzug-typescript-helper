@@ -2,6 +2,8 @@
 # umzug-typescript-helper
 A micro library helping using TypeScript in your [umzug](https://github.com/sequelize/umzug) migrations.
 
+![](https://s3-eu-west-1.amazonaws.com/bleshik/umzug-typescript-helper.jpg "umzug-typescript-helper")
+
 ## Why?
 [umzug](https://github.com/sequelize/umzug) may run JS scripts only. Thus, in order to run a TypeScript migration you will have to compile all the migrations before umzug may run this.
 
