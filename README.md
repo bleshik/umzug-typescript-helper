@@ -28,3 +28,5 @@ export function _20180902_initial() {
 ```
 
 Then you just compile (or/and bundle) everything and just run the migrations entrypoint script.
+
+Check out this article for more details: [How to migrate DBs with NodeJS and TypeScript](https://medium.com/@AlexeyBalchunas/how-to-migrate-dbs-with-nodejs-and-typescript-ededc39d7d19)
