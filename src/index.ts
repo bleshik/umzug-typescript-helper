@@ -41,7 +41,7 @@ function migrationScript(migration: string): string {
             "process.env.MIGRATION = '" + migration + "';" +
             "const spawn = require('cross-spawn');" +
             "return new Promise((resolve, reject) => {" +
-                "spawn('" + cmd + "', [" + args.map((a) => "'" + a + "'").join(",") + "]," +
+                "spawn('" + cmd.replace(/ /g, '\\ ') + "', [" + args.map((a) => "'" + a + "'").join(",") + "]," +
                 "{ env: process.env, stdio: 'inherit', customFds: [0,1,2] })" +
                 ".on('exit', function(code) { if (code !== 0) reject(code); else resolve(code); });" +
             "});" +
