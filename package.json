@@ -39,15 +39,14 @@
     "scripts": {
         "build": "npm run clean && tsc --declaration && npm run uglify",
         "clean": "rimraf dist",
-        "deploy": "npm version patch && npm publish",
+        "deploy": "npm version patch && npm run build && npm publish",
         "lint": "tslint ./src/**/*.ts ./test/**/*.ts",
         "postversion": "git push origin master",
-        "prepublish": "npm run build",
         "pretest": "cross-env NODE_ENV=test npm build && npm run lint",
         "start": "tsc -w",
         "tsc": "tsc --declaration",
         "uglify": "./node_modules/uglify-es/bin/uglifyjs build/index.js --keep-fnames --ecma 6 -o build/index.js"
     },
     "types": "build/index.d.ts",
-    "version": "1.0.2"
+    "version": "1.0.3"
 }
