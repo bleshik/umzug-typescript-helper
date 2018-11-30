@@ -48,5 +48,5 @@
         "uglify": "./node_modules/uglify-es/bin/uglifyjs build/index.js --keep-fnames --ecma 6 -o build/index.js"
     },
     "types": "build/index.d.ts",
-    "version": "1.0.3"
+    "version": "1.0.4"
 }
