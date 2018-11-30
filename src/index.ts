@@ -39,7 +39,7 @@ function migrationScript(migration: string): string {
     return "module.exports = {" +
         "up: function() {" +
             "process.env.MIGRATION = '" + migration + "';" +
-            "const spawn = require('cross-spawn');" +
+            "const spawn = require(process.platform === 'win32' ? 'cross-spawn' : 'spawn');" +
             "return new Promise((resolve, reject) => {" +
                 "spawn('" + cmd.replace(/\\/g,"\\\\").replace(/ /g, '\\ ') + "', [" + args.map((a) => "'" + a.replace(/\\/g,"\\\\") + "'").join(",") + "]," +
                 "{ env: process.env, stdio: 'inherit', customFds: [0,1,2] })" +
