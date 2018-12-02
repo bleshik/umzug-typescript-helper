@@ -27,7 +27,8 @@ export function migrate(migrations: object, umzugOptions: UmzugOptions) {
                 migrations: {
                     path: dir,
                     pattern: /\.js$/,
-                    customResolver: (path: string) => require(path)
+                    // using eval to make it work with webpack, to enforce lazy loading and avoid bundling
+                    customResolver: (path: string) => eval("require('" + path + "')")
                 }
             }
         )
