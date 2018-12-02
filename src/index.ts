@@ -26,7 +26,8 @@ export function migrate(migrations: object, umzugOptions: UmzugOptions) {
             {
                 migrations: {
                     path: dir,
-                    pattern: /\.js$/
+                    pattern: /\.js$/,
+                    customResolver: (path: string) => require(path)
                 }
             }
         )
