@@ -1,9 +1,5 @@
 var webpack = require("webpack");
 var path = require('path');
-var nodeModules = {
-    "umzug": "commonjs umzug",
-    "umzug-dynamodb-storage": "commonjs umzug-dynamodb-storage"
-};
 
 module.exports = {  
     devtool: undefined,
@@ -24,7 +20,6 @@ module.exports = {
     resolve: {
         extensions: ['.ts', '.js']
     },
-    externals: nodeModules,
     output: {
         libraryTarget: 'commonjs',
         path: path.join(process.cwd(), 'build/dist'),

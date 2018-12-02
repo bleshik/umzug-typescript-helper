@@ -4,15 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "build": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --progress --profile",
-      "migrate": "npm run build && node ./build/dist/index.js migrate"
+    "build": "node ./node_modules/webpack/bin/webpack.js --config ./webpack.config.js --progress --profile",
+    "migrate": "npm run build && node ./build/dist/index.js migrate"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "aws-sdk": "2.368.0",
     "umzug-dynamodb-storage": "1.0.2",
-    "umzug-typescript-helper": "1.0.7"
+    "umzug-typescript-helper": "1.0.9"
   },
   "devDependencies": {
     "awesome-typescript-loader": "3.1.3",
