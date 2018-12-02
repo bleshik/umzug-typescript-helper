@@ -1,7 +1,10 @@
 {
     "compilerOptions": {
         "forceConsistentCasingInFileNames": true,
-        "lib": [ "es6", "ES2015" ],
+        "lib": [
+            "es6",
+            "ES2015"
+        ],
         "module": "commonjs",
         "moduleResolution": "node",
         "noImplicitAny": true,
@@ -14,5 +17,8 @@
         "strictNullChecks": true,
         "suppressImplicitAnyIndexErrors": true,
         "target": "es5"
-    }
+    },
+    "include": [
+        "src/**/*"
+    ]
 }
