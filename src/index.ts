@@ -28,7 +28,7 @@ export function migrate(migrations: object, umzugOptions: UmzugOptions) {
                     path: dir,
                     pattern: /\.js$/,
                     // using eval to make it work with webpack, to enforce lazy loading and avoid bundling
-                    customResolver: (path: string) => eval("require('" + path + "')")
+                    customResolver: (path: string) => eval("require('" + path.replace(/\\/g,"\\\\").replace(/ /g, '\\ ') + "')")
                 }
             }
         )
