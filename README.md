@@ -8,7 +8,7 @@ A micro library helping using TypeScript in your [umzug](https://github.com/sequ
 [umzug](https://github.com/sequelize/umzug) may run JS scripts only. Thus, in order to run a TypeScript migration you will have to compile all the migrations before umzug may run this.
 
 This little library makes things a bit easier. All you need is just 1 TypeScript file that acts as an entry point for your migration. Something like this:
-```
+```ts
 import * as migrations from './migrations';
 import { migrate } from 'umzug-typescript-helper';
 
@@ -23,7 +23,7 @@ migrate(migrations, umzugOptions).catch((err: any) => {
 ```
 
 And then your migrations go like this (e.g. in `src/migrations/index.ts`):
-```
+```ts
 export function _20180902_initial() {
     return Promise.resolve("The migration ran successfully!");
 }
